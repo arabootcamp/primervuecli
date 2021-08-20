@@ -12,8 +12,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="obj in array" :key="obj.id">
-          <td v-for="attr in obj" :key="attr.id">{{attr}}</td>
+        <tr v-for="(obj,index) in array" :key="index">
+          <td v-for="(item, name, index2) in obj" :key="index2">{{item}}</td>
         </tr>
       </tbody>
     </table>
